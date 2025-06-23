@@ -4,16 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice for board games</title>
+    <style>
+        body{
+            height: 100dvh;
+            background-color: #3c3939;
+            color: bisque;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        span{
+            font-size: 20vh;
+        }
+        div {
+            font-size: 50vh;
+        }
+        button{
+            width: 20vw;
+            height: 20vw;
+            font-size: 10vh;
+        }
+    </style>
 </head>
 <body>
-    <div>тут буде число</div>
-    <button>згенерувати число від 1 до 6</button>
+    <span>😻</span>
+    <div>*</div>
+    <button>1 ... 6</button>
 
 
     <script>
         const output = document.querySelector('div')
         const button = document.addEventListener('click', ()=>{
-            const diceNow = (Math.random()*6) + 1
+            // const diceNow = (Math.random()*6) + 1
+            const diceNow = Math.ceil(Math.random()*6)
             output.textContent = diceNow
         })
     </script>
