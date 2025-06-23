@@ -6,7 +6,7 @@
     <title>Dice for board games</title>
     <style>
         body{
-            height: 100dvh;
+            height: 80dvh;
             background-color: #3c3939;
             color: bisque;
             display: flex;
@@ -24,7 +24,7 @@
             padding: 2vh;
             width: 20vw;
             height: 20vw;
-            font-size: 10vh;
+            font-size: 2vh;
             border-radius: 50%;
         }
     </style>
@@ -32,12 +32,13 @@
 <body>
     <span>😻</span>
     <div>*</div>
-    <button>1 ... 6</button>
+    <button>go</button>
 
 
     <script>
         const output = document.querySelector('div')
-        const button = document.addEventListener('click', ()=>{
+        const button = document.addEventListener('click', (e)=>{
+            e.stopPropagation()
             // const diceNow = (Math.random()*6) + 1
             const diceNow = Math.ceil(Math.random()*6)
             output.textContent = diceNow
