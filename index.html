@@ -38,11 +38,11 @@
     <script>
         const output = document.querySelector('div')
         const button = document.addEventListener('click', (e)=>{
-            e.stopPropagation()
+         
             // const diceNow = (Math.random()*6) + 1
             const diceNow = Math.ceil(Math.random()*6)
             output.textContent = diceNow
-        })
+        }, true)
     </script>
 </body>
 </html>
