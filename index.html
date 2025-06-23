@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dice for board games</title>
 </head>
 <body>
     <div>тут буде число</div>
-    <button>генерую число від 1 до 6</button>
+    <button>згенерувати число від 1 до 6</button>
+
+
+    <script>
+        const output = document.querySelector('div')
+        const button = document.addEventListener('click', ()=>{
+            const diceNow = (Math.random()*6) + 1
+            output.textContent = diceNow
+        })
+    </script>
 </body>
 </html>
